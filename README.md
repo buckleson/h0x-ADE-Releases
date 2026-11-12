@@ -35,7 +35,7 @@ HyperOx is a desktop app for working with AI coding agents. Every agent gets its
 - **Control from anywhere.** Pair your phone or Telegram to see your agents, get a notice when one finishes, and answer permission prompts while you are away from your desk.
 - **Work on other machines.** Connect to your servers over SSH and run agents there as if they were local.
 - **Make it yours.** Layouts, settings and mods let you shape the workspace around how you work.
-- **Built to be safe.** Every download and update is signed and checked before it installs, and HyperOx collects no usage data.
+- **Built to be safe.** Every download and update is signed and checked before it installs, and a bad update is rolled back by itself.
 
 ## Download and install
 
@@ -50,7 +50,17 @@ Older versions and the release notes for each version are on the [releases page]
 
 ## Updates
 
-HyperOx tells you when a new version is ready and installs it when you say so. You can turn the update check off in **Settings**.
+HyperOx keeps itself up to date: the app, the background engine (core) and the terminal runtime are checked together, and whichever part has a newer version is updated. The engine and runtime update once no agent has been working for 2 minutes, and your terminals keep running; the app updates when you quit it. A short notice tells you what was updated.
+
+If a new version doesn't start properly, HyperOx goes back to the previous one by itself and lets you know. You can turn automatic updates off in **Settings**.
+
+Engine and runtime files are published at [h0x-ADE-Core-Releases](https://github.com/buckleson/h0x-ADE-Core-Releases/releases) and [h0x-ADE-Runtime-Releases](https://github.com/buckleson/h0x-ADE-Runtime-Releases/releases).
+
+## Your data (beta)
+
+During the beta, HyperOx sends usage data and failure reports so we can fix problems and improve the app. You are identified by a random install ID, not your name or email. HyperOx never sends what you type, your prompts, agent replies, terminal contents, file or folder names, or your keys. IP addresses are not stored; your approximate location (country and city) is. After the beta we plan to move data collection to zero-knowledge proofs.
+
+You can turn usage analytics off any time in **Settings → Info**. Failure reports (crashes and install or update problems) stay on so we can fix them.
 
 ## How it works
 
