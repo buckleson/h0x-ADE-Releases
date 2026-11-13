@@ -75,7 +75,7 @@ Because the engine owns the terminals, you can close or restart the app and your
 
 - Every release file is signed. HyperOx checks the signature before it installs or updates anything, and refuses a file that does not match.
 - Downloads come only from the official HyperOx release pages, over a secure connection.
-- No telemetry. HyperOx does not collect or send usage data. The only automatic network request is the update check, and you can turn it off.
+- During the beta HyperOx sends usage analytics and failure reports, never your code, prompts, terminal contents or keys. You can turn usage analytics off in **Settings → Info**; see [Your data (beta)](#your-data-beta).
 - Agents that ask for permission, a sign-in or an answer wait for you. Only real permission prompts can be answered from your phone; questions and sign-ins must be answered at your computer.
 
 ## Need help?
