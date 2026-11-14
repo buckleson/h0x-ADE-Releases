@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>The desktop workspace for AI coding agents.</b><br>
-  Run Claude Code, Codex, Gemini, OpenCode and your own tools side by side, watch what every agent is doing, and stay in control from your desk or your phone.
+  Run Claude Code, Codex, OpenCode, Gemini CLI and your own tools side by side, see what every agent is doing, and stay in control from your desk or your phone.
 </p>
 
 <p align="center">
@@ -17,36 +17,125 @@
 </p>
 
 <p align="center">
-  <a href="https://www.pavii.tech/products/dev-tools/docs/"><b>Documentation</b></a> ·
+  <a href="https://pavii.tech/products/dev-tools/docs/"><b>Documentation</b></a> ·
+  <a href="https://github.com/buckleson/h0x-ADE-Releases/releases"><b>Releases</b></a> ·
   <a href="https://pavii.tech"><b>Pavii</b></a> ·
-  <a href="https://buckleson.com"><b>Buckleson</b></a> ·
-  <a href="https://github.com/buckleson/h0x-ADE-Releases/releases"><b>All releases</b></a>
+  <a href="https://buckleson.com"><b>Buckleson</b></a>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/main.png" alt="HyperOx main window with split terminals and the Changes panel" width="900">
 </p>
 
 ---
 
-## What is HyperOx?
+## Works with
 
-HyperOx is a desktop app for working with AI coding agents. Every agent gets its own terminal, and HyperOx keeps track of all of them: which one is working, which one is waiting for you, and which one is done. You spend less time switching windows and more time shipping.
+<p align="center">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white">
+  <img alt="Codex" src="https://img.shields.io/badge/Codex%20(OpenAI)-412991?style=for-the-badge&logo=openai&logoColor=white">
+  <img alt="OpenCode" src="https://img.shields.io/badge/OpenCode-211E1E?style=for-the-badge&logo=gnubash&logoColor=white">
+  <img alt="Gemini CLI" src="https://img.shields.io/badge/Gemini%20CLI-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white">
+  <img alt="Any CLI you add" src="https://img.shields.io/badge/Any%20CLI%20you%20add-444444?style=for-the-badge&logo=windowsterminal&logoColor=white">
+</p>
 
-- **Many agents, one window.** Open as many agent terminals as you like, arrange them in tabs and layouts, and save the layout for next time.
-- **Know what each agent is doing.** Every terminal shows a clear status (working, waiting for you, done, error), so you can see at a glance where you are needed.
-- **Never lose a session.** Terminals keep running in the background engine even when the window is closed, and they come back exactly where you left them.
-- **Control from anywhere.** Pair your phone or Telegram to see your agents, get a notice when one finishes, and answer permission prompts while you are away from your desk.
-- **Work on other machines.** Connect to your servers over SSH and run agents there as if they were local.
-- **Make it yours.** Layouts, settings and mods let you shape the workspace around how you work.
-- **Built to be safe.** Every download and update is signed and checked before it installs, and a bad update is rolled back by itself.
+Each agent runs in a normal terminal, so anything you can start from a shell works. HyperOx also recognizes other agent CLIs (for example Cursor, Copilot, Amp, Kiro and Kimi) and shows their state.
 
-## Download and install
+## What you get
 
-1. Click the download button for your computer at the top of this page. It always gives you the newest version.
-2. Unpack the file:
-   - **Windows:** right-click the downloaded file and choose **Extract All**, or use 7-Zip.
-   - **macOS and Linux:** double-click the file, or run `tar -xzf` on it in a terminal.
-3. Open **HyperOx** (`h0x-ade`) from the unpacked folder.
-4. On the first start, HyperOx sets up its background engine for you. There is nothing else to install.
+| Feature | What it does |
+|---|---|
+| Spaces, tabs and split panes | A space holds a project, tabs hold the agents and shells you run in it, panes split a tab. |
+| Run any agent | Start Claude Code, Codex, OpenCode, Gemini CLI or your own program in a new tab with one shortcut. |
+| Agents panel | Every agent with its state (working, blocked on you, done, idle). Pin the ones you care about, peek without switching tabs. |
+| Files, Changes, To-do, Sessions | Edit files with autosave, review the git diff and commit, keep to-do lists, and reopen earlier sessions. |
+| Remote machines | Connect over SSH and run agents on a server. They keep running while your laptop sleeps. |
+| Phone and Telegram pairing | Pair an account to see your agents, get a notice when one finishes, and answer permission prompts away from your desk. |
+| Activity graph | A calendar of your work with agents. It is computed and stored on your computer only. |
+| Themes and layouts | Themes such as darkmatter, Sodium, Voltage and Phosphor, plus switchable layouts you can clone and change. |
+| Mods | Small JavaScript programs that add panels, overlays and windows. Scriptable UI. |
+| Signed releases and in-app updates | Every file is signed and checked before it installs. A bad update rolls back by itself. |
+| Workspaces (0.1.34, coming with the next release) | Save the space you are in (tabs, panes, folders and running agents) and bring it back later. Up to 5 saved. |
 
-Older versions and the release notes for each version are on the [releases page](https://github.com/buckleson/h0x-ADE-Releases/releases).
+### With an account
+
+Signing in adds features that run through the HyperOx account:
+
+| Feature | What it does |
+|---|---|
+| Token saving | Prompt caching to cut the tokens your agents spend. |
+| Observability | Logs, traces and evals for your agent runs. |
+| PII masking | Blockchain-backed masking of personal data. |
+
+The full app is in beta and invite-only. See the [documentation](https://pavii.tech/products/dev-tools/docs/) for how to get access.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/profile.png" alt="Activity graph"><br><sub>Activity graph. Stays on your computer.</sub></td>
+    <td width="50%"><img src="assets/screenshots/themes.png" alt="Themes"><br><sub>Themes and layouts.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/agents.png" alt="Settings, Agents"><br><sub>Settings → Agents: add your own agents and CLI tools.</sub></td>
+    <td width="50%"><img src="assets/screenshots/main.png" alt="Main window"><br><sub>Spaces, tabs and panes in the main window.</sub></td>
+  </tr>
+</table>
+
+## Keyboard shortcuts
+
+Windows and Linux first, macOS second. Every key can be rebound in `keys.json` in the app folder.
+
+| Action | Windows / Linux | macOS |
+|---|---|---|
+| Start an agent in a new tab (1 Claude Code, 2 Codex, 3 OpenCode, 4 Gemini CLI, 5-9 your own) | `Ctrl+Shift+1` ... `9` | `Ctrl+Shift+1` ... `9` |
+| Command palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
+| New tab / close tab | `Ctrl+Shift+T` / `Ctrl+Shift+W` | `Cmd+T` / `Cmd+W` |
+| New space | `Ctrl+Shift+N` | `Cmd+N` |
+| Go to tab 1-9 | `Ctrl+1` ... `9` | `Cmd+1` ... `9` |
+| Next / previous tab | `Ctrl+Tab` / `Ctrl+Shift+Tab` | `Ctrl+Tab` / `Ctrl+Shift+Tab` |
+| Go to space 1-9 | `Alt+1` ... `9` | `Ctrl+1` ... `9` |
+| Split pane right / down | `Ctrl+Shift+O` / `Ctrl+Shift+E` | `Cmd+D` / `Cmd+Shift+D` |
+| Move between panes | `Alt+Arrow` (or `Alt+H J K L`) | `Cmd+Alt+Arrow` |
+| Zoom pane | `Ctrl+Shift+Z` | `Cmd+Shift+Enter` |
+| Close pane | `Ctrl+Shift+X` | `Cmd+Shift+W` |
+| Find in terminal | `Ctrl+Shift+F` | `Cmd+F` |
+| To-do panel | `Ctrl+Shift+J` | `Cmd+Shift+J` |
+| Show or hide the sidebar | `Ctrl+Shift+B` | `Cmd+B` |
+| Settings | `Ctrl+,` | `Cmd+,` |
+| Open a file named in a terminal, at its line | `Ctrl+click` | `Cmd+click` |
+| Close Settings and dialogs | `Esc` | `Esc` |
+
+## Install
+
+| Platform | Command |
+|---|---|
+| macOS and Linux | `curl -fsSL https://github.com/vjk7989/h0x-ADE-app/releases/latest/download/install.sh \| sh` |
+| Windows (PowerShell) | `powershell -c "irm https://github.com/vjk7989/h0x-ADE-app/releases/latest/download/install.ps1 \| iex"` |
+| Manual | Download the `.tar.gz` for your platform from the buttons above or the [releases page](https://github.com/buckleson/h0x-ADE-Releases/releases), [verify it](#verify-your-download), unpack it and run `h0x-ade`. |
+
+Requirements: Windows 10/11 x64, macOS on Apple Silicon, Linux x86_64 or aarch64.
+
+On macOS, if the system blocks the app, sign it locally once:
+
+```sh
+xattr -dr com.apple.quarantine ~/Applications/HyperOx.app && codesign --force --deep --sign - ~/Applications/HyperOx.app
+```
+
+## Verify your download
+
+Every release file has a [minisign](https://jedisct1.github.io/minisign/) signature next to it (`<file>.minisig`). The public key is:
+
+```text
+RWTEdqtOBn6VKQ/x9x3qWk/gIWUb/I1OlZXsTlHyrkp9Yq30qBki+tdt
+```
+
+```sh
+minisign -Vm h0x-ade-linux-x86_64.tar.gz -P RWTEdqtOBn6VKQ/x9x3qWk/gIWUb/I1OlZXsTlHyrkp9Yq30qBki+tdt
+```
+
+[rsign2](https://github.com/jedisct1/rsign2) works the same way. The installers and the in-app updater check these signatures themselves.
+
 
 ## Updates
 
@@ -78,12 +167,20 @@ Because the engine owns the terminals, you can close or restart the app and your
 - During the beta HyperOx sends usage analytics and failure reports, never your code, prompts, terminal contents or keys. You can turn usage analytics off in **Settings → Info**; see [Your data (beta)](#your-data-beta).
 - Agents that ask for permission, a sign-in or an answer wait for you. Only real permission prompts can be answered from your phone; questions and sign-ins must be answered at your computer.
 
+## FAQ
+
+**Is it free?** HyperOx is in early access (beta). The full app is invite-only; see the [documentation](https://pavii.tech/products/dev-tools/docs/).
+
+**Where is my data?** Your activity graph is computed and kept on your computer. Terminals and files stay on the machines they run on.
+
+**Do my agents stop when I close the window?** No. The engine keeps terminals running in the background and they are there when you open the app again.
+
 ## Need help?
 
 Read the [documentation](https://www.pavii.tech/products/dev-tools/docs/), or visit [pavii.tech](https://pavii.tech) and [buckleson.com](https://buckleson.com).
 
 ## License
 
-HyperOx is released under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for the components it includes and their licenses.
+HyperOx binaries are released under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for the components they include and their licenses.
 
-<p align="center">Made by <a href="https://buckleson.com">Buckleson</a> · <a href="https://pavii.tech">Pavii</a></p>
+<p align="center">Made by <a href="https://pavii.tech">Team Pavii</a> · Security partner <a href="https://buckleson.com">Buckleson</a></p>
